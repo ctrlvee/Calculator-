@@ -22,4 +22,3 @@ function compute(operator,numOne, numTwo) {
             return divide(numOne,numTwo)
     }
 }
-compute('/',2,3);
