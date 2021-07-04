@@ -9,8 +9,6 @@ document.body.appendChild(displayContainer);
 // Display current & previous container
 const currentValue = document.createElement('p')
 currentValue.classList.add('currentValue');
-//currentValue.textContent = '';
-//displayContainer.appendChild(currentValue);
 
 const previousValue = document.createElement('p');
 previousValue.classList.add('previousValue');
@@ -51,7 +49,27 @@ function compute(operator,numOne, numTwo) {
 
 function updateDisplay(result) {
     currentValue.textContent = result;
-displayContainer.appendChild(currentValue);
-    //document.getElementsByClassName('currentValue').textContent = result;
-   
+    displayContainer.appendChild(currentValue);
 }
+
+
+const numButtons = document.querySelectorAll('.button-number');
+const operatorButtons = document.querySelectorAll('.operator');
+const equalSign = document.querySelector('.equalSign');
+const allClear = document.querySelector('.allClear');
+
+console.log(numButtons);
+numButtons.forEach((button) => {
+    
+    button.addEventListener('click', () => {
+        currentValue.textContent += button.textContent;
+        displayContainer.appendChild(currentValue);
+    });
+
+});
+  /*  
+    addEventListener('click', function() {
+    console.log(button.textContent);
+    currentValue.textContent = button.textContent;
+}));
+*/
