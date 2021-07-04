@@ -22,3 +22,19 @@ function compute(operator,numOne, numTwo) {
             return divide(numOne,numTwo)
     }
 }
+
+// Section for display
+const displayContainer = document.createElement('div');
+displayContainer.classList.add('displayContainer');
+document.body.appendChild(displayContainer);
+
+// Display current & previous container
+const currentValue = document.createElement('p')
+currentValue.classList.add('currentValue');
+currentValue.textContent = 'current';
+displayContainer.appendChild(currentValue);
+
+const previousValue = document.createElement('p');
+previousValue.classList.add('previousValue');
+previousValue.textContent = 'previous';
+displayContainer.appendChild(previousValue);
