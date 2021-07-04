@@ -1,4 +1,5 @@
-let result = 0;
+let result;
+let useOperator;
 
 
 // Section for display
@@ -58,18 +59,19 @@ const operatorButtons = document.querySelectorAll('.operator');
 const equalSign = document.querySelector('.equalSign');
 const allClear = document.querySelector('.allClear');
 
-console.log(numButtons);
 numButtons.forEach((button) => {
-    
     button.addEventListener('click', () => {
         currentValue.textContent += button.textContent;
         displayContainer.appendChild(currentValue);
     });
-
 });
-  /*  
-    addEventListener('click', function() {
-    console.log(button.textContent);
-    currentValue.textContent = button.textContent;
-}));
-*/
+
+operatorButtons.forEach((operator) => {
+    operator.addEventListener('click', () => {
+        previousValue.textContent = currentValue.textContent;
+        currentValue.textContent = '';
+        useOperator = operator.textContent;
+    });
+});
+console.log(equalSign);
+equalSign.addEventListener('click', compute(useOperator, previousValue, currentValue));
