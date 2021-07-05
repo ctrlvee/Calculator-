@@ -28,10 +28,30 @@ body {
 
 }
 .displayContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
     border-style: dotted;
     width: 100%;
-    height:auto;
+    height:20%;
+
+    background-color: black;
 }
+
+.currentValue{
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-right:10px;
+    
+}
+.previousValue {
+    color: white;
+    font-size: .9em;
+    margin-right: 10px;
+}
+
 button {
     width: 80px;
     height: 30px;
