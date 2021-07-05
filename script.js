@@ -51,6 +51,10 @@ function compute(operator,numOne, numTwo) {
 function updateDisplay() {
     currentValue.textContent = result;
 }
+function clear() {
+    previousValue.textContent ='';
+    currentValue.textContent ='';
+}
 
 const numButtons = document.querySelectorAll('.button-number');
 const operatorButtons = document.querySelectorAll('.operator');
@@ -81,3 +85,4 @@ equalSign.addEventListener('click', function () {
     once: true,
     //temporary true value.
 });
+allClear.addEventListener('click', clear)
