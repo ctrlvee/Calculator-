@@ -27,6 +27,11 @@ body {
     border-style: dotted;
 
 }
+.displayContainer {
+    border-style: dotted;
+    width: 100%;
+    height:auto;
+}
 button {
     width: 80px;
     height: 30px;
