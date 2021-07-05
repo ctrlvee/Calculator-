@@ -10,6 +10,9 @@ document.body.appendChild(displayContainer);
 // Display current & previous container
 const currentValue = document.createElement('p')
 currentValue.classList.add('currentValue');
+currentValue.textContent = '';
+displayContainer.appendChild(currentValue);
+
 
 const previousValue = document.createElement('p');
 previousValue.classList.add('previousValue');
@@ -17,22 +20,22 @@ previousValue.textContent = 'previous';
 displayContainer.appendChild(previousValue);
 
 function add(numOne, numTwo) {
-    return numOne + numTwo
+    return (numOne+numTwo)
 }
 function subtract(numOne, numTwo) {
-    return numOne - numTwo
+    return (numOne-numTwo)
 }
 function multiply(numOne, numTwo) {
-    return numOne * numTwo
+    return (numOne*numTwo)
 }
 function divide(numOne, numTwo) {
-    return numOne / numTwo
+    return (numOne/numTwo)
 }
 function compute(operator,numOne, numTwo) {
     switch (operator) {
         case '+':
             result = add(numOne,numTwo);
-            break
+            break;
         case '-':
             result = subtract(numOne,numTwo);
             break
@@ -43,14 +46,14 @@ function compute(operator,numOne, numTwo) {
             result = divide(numOne,numTwo);
             break
     }
-    
-    updateDisplay(result);
-    console.log("I'm here");
+
+    updateDisplay();
 }
 
-function updateDisplay(result) {
+function updateDisplay() {
+
     currentValue.textContent = result;
-    displayContainer.appendChild(currentValue);
+    
 }
 
 
@@ -62,6 +65,8 @@ const allClear = document.querySelector('.allClear');
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         currentValue.textContent += button.textContent;
+        currentValue.textContent = currentValue.textContent.replace(' ', '');
+        console.log(currentValue.textContent);
         displayContainer.appendChild(currentValue);
     });
 });
@@ -73,5 +78,11 @@ operatorButtons.forEach((operator) => {
         useOperator = operator.textContent;
     });
 });
-console.log(equalSign);
-equalSign.addEventListener('click', compute(useOperator, previousValue, currentValue));
+
+equalSign.addEventListener('click', function () {
+   compute(useOperator, parseFloat(previousValue.textContent),parseFloat(currentValue.textContent));
+    
+}, {
+    once: true,
+    //temporary true value.
+});
