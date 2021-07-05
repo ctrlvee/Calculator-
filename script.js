@@ -1,7 +1,6 @@
 let result;
 let useOperator;
 
-
 // Section for display
 const displayContainer = document.createElement('div');
 displayContainer.classList.add('displayContainer');
@@ -12,7 +11,6 @@ const currentValue = document.createElement('p')
 currentValue.classList.add('currentValue');
 currentValue.textContent = '';
 displayContainer.appendChild(currentValue);
-
 
 const previousValue = document.createElement('p');
 previousValue.classList.add('previousValue');
@@ -46,14 +44,11 @@ function compute(operator,numOne, numTwo) {
             result = divide(numOne,numTwo);
             break
     }
-
     updateDisplay();
 }
-
 function updateDisplay() {
     currentValue.textContent = result;
 }
-
 
 const numButtons = document.querySelectorAll('.button-number');
 const operatorButtons = document.querySelectorAll('.operator');
