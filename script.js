@@ -56,7 +56,14 @@ function clear() {
     currentValue.textContent ='';
 }
 
+function addDecimal() {
+    if (!(currentValue.textContent.includes('.'))) {
+        currentValue.textContent += decimal.textContent;
+    }
+}
+
 const numButtons = document.querySelectorAll('.button-number');
+const decimal = document.querySelector('.decimal')
 const operatorButtons = document.querySelectorAll('.operator');
 const equalSign = document.querySelector('.equalSign');
 const allClear = document.querySelector('.allClear');
@@ -69,6 +76,7 @@ numButtons.forEach((button) => {
         displayContainer.appendChild(currentValue);
     });
 });
+decimal.addEventListener('click',addDecimal)
 
 operatorButtons.forEach((operator) => {
     operator.addEventListener('click', () => {
@@ -85,4 +93,5 @@ equalSign.addEventListener('click', function () {
     once: true,
     //temporary true value.
 });
+
 allClear.addEventListener('click', clear)
