@@ -16,7 +16,7 @@ displayContainer.appendChild(currentValue);
 
 const previousValue = document.createElement('p');
 previousValue.classList.add('previousValue');
-previousValue.textContent = 'previous';
+previousValue.textContent = '';
 displayContainer.appendChild(previousValue);
 
 function add(numOne, numTwo) {
@@ -80,6 +80,8 @@ operatorButtons.forEach((operator) => {
 
 equalSign.addEventListener('click', function () {
    compute(useOperator, parseFloat(previousValue.textContent),parseFloat(currentValue.textContent));
+
+   previousValue.textContent = '';
     
 });
 allClear.addEventListener('click', clear)
