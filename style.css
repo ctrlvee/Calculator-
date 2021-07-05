@@ -41,15 +41,15 @@ h1 {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    border-style: dotted;
+    border: px solid;
     border-radius: 5px;
     width: 90%;
     height:20%;
     position: relative;
     margin: auto;
     margin-top: 5%;
-
-    background-color: rgba(0,0,0,100);
+    margin-bottom:0;
+    background-color: rgba(0,0,0,.9);
 }
 
 .currentValue{
