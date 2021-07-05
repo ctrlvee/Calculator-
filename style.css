@@ -52,9 +52,18 @@ body {
     color: white;
     font-size: .9em;
     margin-right: 10px;
+   /* Have a margin bottom?*/
 }
-
 button {
     width: 80px;
     height: 30px;
+
+    border-radius: 0.15em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #336;
+    text-align: center;
+    position: relative;
 }
