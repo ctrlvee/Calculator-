@@ -55,11 +55,19 @@ function clear() {
     previousValue.textContent ='';
     currentValue.textContent ='';
 }
+function addDecimal() {
+    if (!(currentValue.textContent.includes('.'))) {
+        currentValue.textContent += decimal.textContent;
+    }
+}
 
 const numButtons = document.querySelectorAll('.button-number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalSign = document.querySelector('.equalSign');
 const allClear = document.querySelector('.allClear');
+const decimal = document.querySelector('.decimal')
+
+decimal.addEventListener('click',addDecimal)
 
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
