@@ -2,9 +2,10 @@ let result;
 let useOperator;
 
 // Section for display
+const calcContainer = document.querySelector('.calcContainer');
 const displayContainer = document.createElement('div');
 displayContainer.classList.add('displayContainer');
-document.body.appendChild(displayContainer);
+calcContainer.appendChild(displayContainer);
 
 // Display current & previous container
 const currentValue = document.createElement('p')
