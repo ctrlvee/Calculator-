@@ -51,9 +51,7 @@ function compute(operator,numOne, numTwo) {
 }
 
 function updateDisplay() {
-
     currentValue.textContent = result;
-    
 }
 
 
