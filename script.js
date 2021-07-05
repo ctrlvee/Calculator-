@@ -3,9 +3,10 @@ let useOperator;
 
 // Section for display
 const calcContainer = document.querySelector('.calcContainer');
+const buttonsContainer = document.querySelector('.buttonsContainer');
 const displayContainer = document.createElement('div');
 displayContainer.classList.add('displayContainer');
-calcContainer.appendChild(displayContainer);
+calcContainer.insertBefore(displayContainer,buttonsContainer);
 
 // Display current & previous container
 const currentValue = document.createElement('p')
