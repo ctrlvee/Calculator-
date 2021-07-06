@@ -52,6 +52,12 @@ h1 {
     background-color: rgba(0,0,0,.9);
 }
 
+.buttonsContainer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+}
 .currentValue{
     color: white;
     font-size: 2.5em;
@@ -77,5 +83,5 @@ button {
     color: #FFFFFF;
     background-color: #336;
     text-align: center;
-    position: relative;
+    
 }
