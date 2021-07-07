@@ -19,6 +19,12 @@ previousValue.classList.add('previousValue');
 previousValue.textContent = '';
 displayContainer.appendChild(previousValue);
 
+function checkLength() {
+    if (currentValue.textContent.length > 10) {
+        currentValue.style.cssText = 'font-size: 1em; word-wrap: break-word; margin:auto';
+    }
+}
+
 function add(numOne, numTwo) {
     return (numOne+numTwo)
 }
@@ -71,11 +77,14 @@ decimal.addEventListener('click',addDecimal)
 
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
+        checkLength();
+
         currentValue.textContent += button.textContent;
         currentValue.textContent = currentValue.textContent.replace(' ', '');
         console.log(currentValue.textContent);
         displayContainer.appendChild(currentValue);
     });
+    
 });
 
 operatorButtons.forEach((operator) => {
