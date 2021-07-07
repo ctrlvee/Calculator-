@@ -101,6 +101,10 @@ button {
     text-align: center;
     
 }
+.button:hover {
+    background-color: white; 
+    transition-duration: 0.5s;
+}
 .equalSign {
     grid-row: 5/6;
     grid-column: 4/5;

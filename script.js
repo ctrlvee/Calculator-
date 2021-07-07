@@ -29,7 +29,6 @@ function multiply(numOne, numTwo) {
     return (numOne*numTwo)
 }
 function divide(numOne, numTwo) {
-    ix
     return (numOne/numTwo)
 }
 function compute(operator,numOne, numTwo) {
