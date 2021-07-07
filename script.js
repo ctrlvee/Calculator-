@@ -42,7 +42,7 @@ function compute(operator,numOne, numTwo) {
         case '*':
             result = multiply(numOne,numTwo)
             break
-        case '/':
+        case '÷':
             result = divide(numOne,numTwo);
             break
     }
