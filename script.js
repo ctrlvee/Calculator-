@@ -99,3 +99,14 @@ equalSign.addEventListener('click', function () {
     
 });
 allClear.addEventListener('click', clear)
+
+document.addEventListener('click', function(event) {
+    switch(event.target) {
+        case decimal:
+        case operatorButtons:
+        case equalSign:
+        case numButtons:
+            console.log(`${event.target} was clicked`);
+            break
+    }
+})
