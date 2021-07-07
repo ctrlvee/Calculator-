@@ -20,11 +20,15 @@ previousValue.textContent = '';
 displayContainer.appendChild(previousValue);
 
 function checkLength() {
-    if (currentValue.textContent.length > 10) {
-        currentValue.style.cssText = 'font-size: 1em; word-wrap: break-all; margin:auto; margin-top: 10px';
-    } else if (currentValue.textContent.length > 25) {
-        currentValue.style.cssText = 'font-size: .5em; word-wrap: break-all; margin:auto';
+
+    switch(currentValue.textContent.length) {
+        case 11:
+            currentValue.style.cssText = 'font-size: 1em; overflow-wrap: break-word; margin:auto; margin-top: 10px';
+            break;
+        case 25:
+            currentValue.style.cssText = 'font-size: 0.5em; word-wrap: break-all; margin:auto ';
     }
+
 }
 
 function add(numOne, numTwo) {
