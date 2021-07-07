@@ -70,21 +70,36 @@ h1 {
 
 }
 
+.currentDiv {
+    width: 60%;
+    background-color: yellow;
+    border:1px solid yellow;
+    z-index:0;
+}
 .currentValue{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'Yomogi', cursive;
     color: white;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
-    margin-right:10px;
+    margin-right:4px;
+    border:1px dotted white;
     
+
+    margin-left:10px;
 }
 .previousValue {
+    position: absolute;
     font-family: 'Yomogi', cursive;
     color: white;
-    font-size: .9em;
+    font-size: 1em;
     margin-right: 10px;
    /* Have a margin bottom?*/
    margin-bottom: .2em;
+   
+
 }
 button {
     font-family: 'Yomogi', cursive;

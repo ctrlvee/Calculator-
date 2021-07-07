@@ -9,10 +9,14 @@ displayContainer.classList.add('displayContainer');
 calcContainer.insertBefore(displayContainer,buttonsContainer);
 
 // Display current & previous container
+const currentDiv = document.createElement('div');
+currentDiv.classList.add('currentDiv');
+displayContainer.appendChild(currentDiv);
+
 const currentValue = document.createElement('p')
 currentValue.classList.add('currentValue');
 currentValue.textContent = '';
-displayContainer.appendChild(currentValue);
+currentDiv.appendChild(currentValue);
 
 const previousValue = document.createElement('p');
 previousValue.classList.add('previousValue');
