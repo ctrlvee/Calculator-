@@ -21,7 +21,9 @@ displayContainer.appendChild(previousValue);
 
 function checkLength() {
     if (currentValue.textContent.length > 10) {
-        currentValue.style.cssText = 'font-size: 1em; word-wrap: break-word; margin:auto';
+        currentValue.style.cssText = 'font-size: 1em; word-wrap: break-all; margin:auto; margin-top: 10px';
+    } else if (currentValue.textContent.length > 25) {
+        currentValue.style.cssText = 'font-size: .5em; word-wrap: break-all; margin:auto';
     }
 }
 
@@ -74,11 +76,9 @@ const allClear = document.querySelector('.allClear');
 const decimal = document.querySelector('.decimal')
 
 decimal.addEventListener('click',addDecimal)
-
+document.addEventListener('click', checkLength);
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        checkLength();
-
         currentValue.textContent += button.textContent;
         currentValue.textContent = currentValue.textContent.replace(' ', '');
         console.log(currentValue.textContent);
