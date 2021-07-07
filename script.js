@@ -78,7 +78,7 @@ numButtons.forEach((button) => {
         currentValue.textContent += button.textContent;
         currentValue.textContent = currentValue.textContent.replace(' ', '');
         console.log(currentValue.textContent);
-        displayContainer.appendChild(currentValue);
+        currentDiv.appendChild(currentValue);
     });
 });
 
