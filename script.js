@@ -26,6 +26,7 @@ function checkLength() {
             currentValue.style.cssText = 'font-size:2.2em; margin-bottom:1px; margin-right:10px';
             break
         case 11:
+            currentValue.textContent += '\n';
             currentValue.style.cssText = 'flex-direction: column; align-items: flex-end; font-size: 1em; height:50px; margin:auto; margin-top: 10px';
             previousValue.style.cssText = 'font-size:0.5em';
             break
