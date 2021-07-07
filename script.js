@@ -61,7 +61,7 @@ function addDecimal() {
     }
 }
 
-const numButtons = document.querySelectorAll('.button-number');
+const numButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalSign = document.querySelector('.equalSign');
 const allClear = document.querySelector('.allClear');
