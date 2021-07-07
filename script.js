@@ -20,21 +20,29 @@ previousValue.textContent = '';
 displayContainer.appendChild(previousValue);
 
 function checkLength() {
-
     switch(currentValue.textContent.length) {
         case 0:
-            currentValue.style.cssText = 'font-size:2.2em; margin-bottom:1px; margin-right:10px';
+            currentValue.style.cssText = 'justify-content: flex-end; font-size:2.2em; margin-bottom:1px; margin-right:10px';
             break
-        case 11:
+        case 10:
             currentValue.textContent += '\n';
-            currentValue.style.cssText = 'flex-direction: column; align-items: flex-end; font-size: 1em; height:50px; margin:auto; margin-top: 10px';
+            currentValue.style.cssText = 'justify-content: flex-end; font-size: 1em; height:50px; margin:auto; margin-top: 10px; height: auto';
             previousValue.style.cssText = 'font-size:0.5em';
             break
-        /*case 25:
-            currentValue.style.cssText = 'font-size: 0.5em; word-wrap: break-all; margin:auto ';
-            break*/
+        case 26:
+            currentValue.style.cssText = 'justify-content: flex-start; font-size: 0.7em; height: 50px; margin:auto;';
+            break;
+        case 35:
+            currentValue.textContent += '\n';
+            currentValue.style.cssText = 'justify-content: center; font-size: 0.5em; word-wrap: break-all; margin:auto ';
+            break
     }
 
+}
+function removeBreak () {
+    currentValue.textContent.replaceAll('\n', '');
+    currentValue.textContent.replaceAll(' ', '');
+    console.log('Done' + currentValue.textContent);
 }
 
 function add(numOne, numTwo) {

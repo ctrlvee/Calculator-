@@ -61,20 +61,13 @@ h1 {
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(4, 1fr);
     
-    /* 
-    colOne - 0,3,6,9
-    colTwo - 1,4,7,.
-    colThree - 2,5,8,=
-    colFour = AC, +, - /, *
-    */
-
 }
 
 .currentValue{
     display: flex;
     flex-wrap:wrap;
     justify-content: flex-end;
-    border: 1px dotted;
+
     width: 200px;
     height: auto;
     font-family: 'Yomogi', cursive;
