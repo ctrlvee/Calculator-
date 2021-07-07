@@ -29,7 +29,6 @@ function multiply(numOne, numTwo) {
     return (numOne*numTwo)
 }
 function divide(numOne, numTwo) {
-    ix
     return (numOne/numTwo)
 }
 function compute(operator,numOne, numTwo) {
@@ -62,6 +61,24 @@ function addDecimal() {
     }
 }
 
+function checkResult() {
+    if (currentValue.textContent === result || currentValue.textContent === 'ERROR') {
+        preventAppend();
+    }
+}
+function preventAppend() {
+    document.addEventListener('mouseover', function(event) {
+        switch(event.target) {
+            case decimal:
+            case operatorButtons:
+            case equalSign:
+            case numButtons:
+                currentValue.textContent = '';
+                previousValue.textContent = '';
+                break
+        }
+    })   
+}
 const numButtons = document.querySelectorAll('.button-number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalSign = document.querySelector('.equalSign');
@@ -89,24 +106,18 @@ operatorButtons.forEach((operator) => {
 
 equalSign.addEventListener('click', function () {
     if (parseFloat(currentValue.textContent) === 0) {
-        return currentValue.textContent = 'ERROR';
+        currentValue.textContent = 'ERROR';
+
     } else {
         compute(useOperator, parseFloat(previousValue.textContent),parseFloat(currentValue.textContent));
 
         previousValue.textContent = '';
     }
    
-    
+    checkResult(); 
+    console.log('here') 
 });
 allClear.addEventListener('click', clear)
 
-document.addEventListener('click', function(event) {
-    switch(event.target) {
-        case decimal:
-        case operatorButtons:
-        case equalSign:
-        case numButtons:
-            console.log(`${event.target} was clicked`);
-            break
-    }
-})
+
+
