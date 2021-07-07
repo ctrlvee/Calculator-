@@ -71,6 +71,11 @@ h1 {
 }
 
 .currentValue{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+    border: 1px dotted;
+    width: 80%;
     font-family: 'Yomogi', cursive;
     color: white;
     font-size: 2.2em;
