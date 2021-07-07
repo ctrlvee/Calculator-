@@ -29,6 +29,7 @@ function multiply(numOne, numTwo) {
     return (numOne*numTwo)
 }
 function divide(numOne, numTwo) {
+    ix
     return (numOne/numTwo)
 }
 function compute(operator,numOne, numTwo) {
@@ -87,9 +88,14 @@ operatorButtons.forEach((operator) => {
 });
 
 equalSign.addEventListener('click', function () {
-   compute(useOperator, parseFloat(previousValue.textContent),parseFloat(currentValue.textContent));
+    if (parseFloat(currentValue.textContent) === 0) {
+        return currentValue.textContent = 'ERROR';
+    } else {
+        compute(useOperator, parseFloat(previousValue.textContent),parseFloat(currentValue.textContent));
 
-   previousValue.textContent = '';
+        previousValue.textContent = '';
+    }
+   
     
 });
 allClear.addEventListener('click', clear)
