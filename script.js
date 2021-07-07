@@ -22,11 +22,17 @@ displayContainer.appendChild(previousValue);
 function checkLength() {
 
     switch(currentValue.textContent.length) {
+        case 0:
+            currentValue.style.cssText = 'font-size:2.2em; margin-bottom:1px; margin-right:10px'
+
+            break
         case 11:
-            currentValue.style.cssText = 'font-size: 1em; overflow-wrap: break-word; margin:auto; margin-top: 10px';
+            currentValue.style.cssText = 'font-size: 1em; word: break-word; margin:auto; margin-top: 10px';
+            previousValue.style.cssText = 'font-size:0.5em'
             break;
         case 25:
             currentValue.style.cssText = 'font-size: 0.5em; word-wrap: break-all; margin:auto ';
+            break
     }
 
 }
